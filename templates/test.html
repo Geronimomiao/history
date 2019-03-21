@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>发送一个 HTTP POST 请求页面并获取返回内容</button>
+    <a href="https://baidu.com">1</a>
+</body>
+</html>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.post("http://123.207.148.192:8200/source/detail", {
+                    year: "1937",
+                    month: "7"
+                },
+                function (data) {
+                    console.log(data)
+                });
+        });
+    });
+</script>
